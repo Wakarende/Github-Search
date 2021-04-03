@@ -1,10 +1,82 @@
 <!-- Search Form  -->
-<form>
+<form (ngSubmit)="search()">
   <mat-label>Input Username:</mat-label><br>
-  <input matInput placeholder="Username" value="" appearance="fill"><br>
+  <input matInput placeholder="Username" value="" appearance="fill" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"><br>
   <button mat-raised-button color="accent">Search</button>
-  <button mat-raised-button color="warn">Reset</button>
-
+  <button mat-raised-button color="warn" (click)="reset()">Reset</button>
 </form>
-<app-users-display></app-users-display>
+<!-- Basic Information Display  -->
+<!-- <div class="container">
+  <mat-card color="primary">
+    <mat-card-title>{{ user?.name }}</mat-card-title>
+    <mat-card-content>
+      <mat-grid-list cols="2" rowHeight="50px">
+        <mat-grid-tile>
+          <img class="image" src="{{ user?.avatar_url }}" alt="Profile Picture">
+        </mat-grid-tile>
+         <mat-grid-tile>
+          <span>{{ user?.public_repos }} Public Repos</span><br>
+          <span>{{ user?.public_gists }} Public Gists</span><br>
+          <span>{{ user?.followers }} Followers</span><br>
+          <span>{{ user?.following }} Following</span><br>
+        </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list cols="1">
+          <label for="">Username:</label>
+          <p>{{ user?.login }}</p>
+          <label for="">Location:</label>
+          <p>{{ user?.location }}</p>
+          <label for="">Website:</label>
+          <p>{{ user?.blog }}</p>
+          <label for="">Member Since:</label>
+          <p>{{ user?.created_at | date: 'shortDate' }}</p>
+        </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- Repository Details  -->
+<!-- <div class="container">
+  <mat-card>
+    <mat-card-title>Repos</mat-card-title>
+    <mat-card-content>
+      <h4>
+        <a href="{{ repos.html_url }}" target="_blank">{{ repos.name }}</a>
+      </h4>
+      <p> {{ repos.description }}</p>
+      <span>{{ repos.watchers }} Stars</span>
+      <span>{{ repos.forks }} Forks</span>
+
+    </mat-card-content>
+  </mat-card>
+  
+</div> --> 
+<!-- User Display  -->
+<h4>name: {{ user?.name }}</h4>
+<span>{{ user?.public_repos }} Public Repos</span><br>
+<span>{{ user?.public_gists }} Public Gists</span><br>
+<span>{{ user?.followers }} Followers</span><br>
+<span>{{ user?.following }} Following</span><br>
+
+<label for="">Username</label>
+<p>{{ user?.login }}</p>
+<label for="">Location</label>
+<p>{{ user?.location }}</p>
+<label for="">Website</label>
+<p>{{ user?.blog }}</p>
+<label for="">Member Since</label>
+<p>{{ user?.created_at | date: 'shortDate' }}</p>
+
+<!-- Repo Display  -->
+<section *ngFor="let repo of repos">
+<h4>Repos</h4>
+<h5>
+  <a href="{{ repo.html_url }}" target="_blank">{{repo.name}}</a>
+</h5>
+<p>{{ repo.description }}</p>
+<span>{{ repo.watchers }} Stars</span>
+<span>{{ repo.forks }} Forks</span>
+</section>
+
+
+<!-- <app-users-display></app-users-display> -->
  

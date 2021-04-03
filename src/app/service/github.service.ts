@@ -8,6 +8,7 @@ export class GithubService {
   username:string;
 
   // apiUrl = 'https://api.github.com/users?per_page=10';
+  urlRepo = 'https://api.github.com/search/repositories?q='
   constructor(private http:HttpClient) { }
 
   getUser() {
@@ -18,5 +19,8 @@ export class GithubService {
   }
   updateUsername(username:string){
     this.username = username;
+  }
+  getRepository(){
+    return this.http.get()
   }
 }
