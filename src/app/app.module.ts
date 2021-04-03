@@ -8,22 +8,28 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
-// import { MatCardModule } from '@angular/material/button'
+import { MatCardModule } from '@angular/material/card'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http'
 
 import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { HomeComponent } from './home/home.component';
+import { RepoDisplayComponent } from './repo-display/repo-display.component';
+import { UsersDisplayComponent } from './users-display/users-display.component';
+import { GithubService } from './service/github.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     RepositoriesComponent,
-    HomeComponent
+    HomeComponent,
+    RepoDisplayComponent,
+    UsersDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +43,10 @@ import { HomeComponent } from './home/home.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    // MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
