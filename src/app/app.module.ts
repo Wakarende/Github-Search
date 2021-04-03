@@ -21,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
-import { HomeComponent } from './home/home.component';
 import { RepoDisplayComponent } from './repo-display/repo-display.component';
 import { UsersDisplayComponent } from './users-display/users-display.component';
 import { GithubService } from './service/github.service'
@@ -31,7 +30,6 @@ import { GithubService } from './service/github.service'
     AppComponent,
     UsersComponent,
     RepositoriesComponent,
-    HomeComponent,
     RepoDisplayComponent,
     UsersDisplayComponent
   ],
