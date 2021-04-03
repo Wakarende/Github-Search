@@ -1,3 +1,9 @@
 <div class="container">
-  <mat-card>Simple card</mat-card>
+  <mat-card *ngFor="let user of users | async">
+    <mat-card-title>User</mat-card-title>
+      <mat-card-content>
+        {{ user.login }}
+      </mat-card-content>
+      
+  </mat-card>
 </div>

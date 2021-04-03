@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GithubService } from '../service/github.service'
+
 
 @Component({
   selector: 'app-users-display',
@@ -7,11 +7,12 @@ import { GithubService } from '../service/github.service'
   styleUrls: ['./users-display.component.css']
 })
 export class UsersDisplayComponent implements OnInit {
+  users;
 
-  constructor(private githubService: GithubService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getUsers = this.githubService.getUsers()
+    // this.users= this.githubService.getUsers()
     // this.githubService.getUsers()
     // .subscribe(users => {
     //   console.log(users);

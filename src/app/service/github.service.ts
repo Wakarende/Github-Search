@@ -5,11 +5,18 @@ import { HttpClient } from '@angular/common/http'
   providedIn: 'root'
 })
 export class GithubService {
+  username:string;
 
-  apiKey = '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';
+  // apiUrl = 'https://api.github.com/users?per_page=10';
   constructor(private http:HttpClient) { }
 
-  getUsers() {
-    return this.http.get(`${this.apiKey}?per_page=10`)
+  getUser() {
+    return this.http.get(`https://api.github.com/users/${this.username}`);
+  }
+  getRepos() {
+    return this.http.get(`https://api.github.com/users/${this.username}/repos`)
+  }
+  updateUsername(username:string){
+    this.username = username;
   }
 }
