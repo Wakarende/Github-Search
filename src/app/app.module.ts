@@ -23,7 +23,8 @@ import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { RepoDisplayComponent } from './repo-display/repo-display.component';
 import { UsersDisplayComponent } from './users-display/users-display.component';
-import { GithubService } from './service/github.service'
+import { GithubService } from './service/github.service';
+import { TimeAgoPipe } from './time-ago.pipe'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GithubService } from './service/github.service'
     UsersComponent,
     RepositoriesComponent,
     RepoDisplayComponent,
-    UsersDisplayComponent
+    UsersDisplayComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,

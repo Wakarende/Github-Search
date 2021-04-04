@@ -1,7 +1,12 @@
 <form>
   <mat-label>Input Repository Name:</mat-label><br>
   <input matInput placeholder="Repository Name" value="" appearance="fill" [(ngModel)]='repoName' (keyup)="findRepo()" [ngModelOptions]="{standalone: true}"><br>
-  <button mat-raised-button color="secondary">Accent</button>
 </form>
-
+<div class="display" *ngFor='let item of repoItems' >
+   <a href="{{item.html_url}}" target="_blank"><strong>{{item.name}}</strong></a>
+  <p><strong>Created:</strong> {{item.created_at|date}}</p>
+  <p><strong>Created by:</strong> {{item.owner.login}}</p>
+  <p><strong>Language used:</strong> {{item.language}}</p>
+  <p>{{item.description}}</p>
+</div>
 <!-- <app-repo-display></app-repo-display> -->

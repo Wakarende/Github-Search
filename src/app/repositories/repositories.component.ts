@@ -9,7 +9,7 @@ import { GithubService } from '../service/github.service'
 })
 export class RepositoriesComponent implements OnInit {
 username;
-repoName:string 
+repoName:string = "Akan"
 repoItems:any[];
 repo:string;
   constructor(private githubService: GithubService) { 
