@@ -1,11 +1,11 @@
 <!-- Search Form  -->
 <section class="users-form">
   <div class="parent">
-  <form (ngSubmit)="search()">
+  <form (ngSubmit)="search()" class="form">
   <mat-label>Input Username:</mat-label><br>
   <input matInput placeholder="Username" value="" appearance="fill" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" ><br>
-  <button mat-raised-button color="accent" style="margin-right:5px">Search</button>
-  <button mat-raised-button color="warn" (click)="reset()" style="margin-left:5px">Reset</button>
+  <button class="form-btn" mat-raised-button color="accent" style="margin-right:5px">Search</button>
+  <button class="form-btn" mat-raised-button color="warn" (click)="reset()" style="margin-left:5px">Reset</button>
   </form>
   </div>
 </section>
@@ -29,14 +29,14 @@
          <button mat-raised-button  class="info-btn">{{ user?.following }} Following</button>
           </div>
           <div class="user-info">
-          <label for="">Username:</label>
-          <span>{{ user?.login }}</span><br>
-          <label for="">Location:</label><br>
-          <span>{{ user?.location }}</span>
-          <label for="">Website:</label>
-          <span>{{ user?.blog }}</span><br>
-          <label for="">Member Since:</label>
-          <span>{{ user?.created_at | date: 'shortDate' }}</span>
+          <label class="description" for="">Username:</label>
+          <span class="description-text">{{ user?.login }}</span><br>
+          <label class="description" for="">Location:</label>
+          <span class="description-text">{{ user?.location }}</span><br>
+          <label class="description" for="">Website:</label>
+          <span class="description-text">{{ user?.blog }}</span><br>
+          <label class="description" for="">Member Since:</label>
+          <span class="description-text">{{ user?.created_at | date: 'shortDate' }}</span>
           </div> 
         </div>
       </div>  

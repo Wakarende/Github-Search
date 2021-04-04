@@ -4,6 +4,10 @@
   align-items: center;
   flex-direction: column;
 }
+.form{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 .display {
   display: flex;
   justify-content: center;
@@ -18,6 +22,12 @@
   color: black;
   margin-bottom: 40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.description{
+  font-size: 16px;
+}
+.description-text{
+  font-size: 16px;
 }
 .image{
   height: 100px;
@@ -47,10 +57,19 @@
   background: #008080;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 5px;
+  border-radius: 10px;
+}
+.form-btn{
+  background: #008080;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 10px;
+  color: white;
+  border-radius: 10px;
 }
 .user-info {
   margin-top: 20px;
   margin-left: 20px;
+  font-size: 14px;
 }
 /* Repo Display  */
 .repo-title{
