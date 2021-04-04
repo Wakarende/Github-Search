@@ -23,10 +23,10 @@
         </div>
         <div class="info-disp">
           <div class="span-disp">
-          <button mat-raised-button color="accent" class="info-btn">{{ user?.public_repos }} Repos</button>
-          <button mat-raised-button color="accent" class="info-btn">{{ user?.public_gists }} Gists</button>
-        <button mat-raised-button color="accent" class="info-btn">{{ user?.followers }} Followers</button>
-         <button mat-raised-button color="accent" class="info-btn">{{ user?.following }} Following</button>
+          <button mat-raised-button  class="info-btn">{{ user?.public_repos }} Repos</button>
+          <button  mat-raised-button  class="info-btn">{{ user?.public_gists }} Gists</button>
+        <button mat-raised-button  class="info-btn">{{ user?.followers }} Followers</button>
+         <button mat-raised-button  class="info-btn">{{ user?.following }} Following</button>
           </div>
           <div class="user-info">
           <label for="">Username:</label>
@@ -49,8 +49,8 @@
   <div class="repo-disp">
     <section *ngFor="let repo of repos">
       <mat-card class="repo-card">
-        <mat-card-title><h5>
-        <a href="{{ repo.html_url }}" target="_blank">{{repo.name}}</a>
+        <mat-card-title class="repo-card-title"><h5>
+        <a href="{{ repo.html_url }}" target="_blank" class="repo-name">{{repo.name}}</a>
       </h5></mat-card-title>
       <mat-card-content>
         <p class="repo-text">{{ repo.description }}</p>
