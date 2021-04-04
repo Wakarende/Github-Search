@@ -6,10 +6,12 @@
   <input matInput placeholder="Username" value="" appearance="fill" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" ><br>
   <button mat-raised-button color="accent" style="margin-right:5px">Search</button>
   <button mat-raised-button color="warn" (click)="reset()" style="margin-left:5px">Reset</button>
-</form>
-</div>
+  </form>
+  </div>
+</section>
 <!-- User Display  -->
-<div class="display">
+<!-- <section *ngIf="user"> -->
+  <div class="display">
   <mat-card class="user-display">
     <mat-card-title>
        <span>Name: </span>{{ user?.name }}
@@ -21,19 +23,22 @@
         </div>
         <div class="info-disp">
           <div class="span-disp">
-          <span class="info-span">{{ user?.public_repos }} Public Repos</span><br>
-          <span class="info-span">{{ user?.public_gists }} Public Gists</span><br>
-          <span class="info-span">{{ user?.followers }} Followers</span><br>
-          <span class="info-span">{{ user?.following }} Following</span><br>
+          <button mat-raised-button color="accent" class="info-btn">{{ user?.public_repos }} Repos</button>
+          <button mat-raised-button color="accent" class="info-btn">{{ user?.public_gists }} Gists</button>
+        <button mat-raised-button color="accent" class="info-btn">{{ user?.followers }} Followers</button>
+         <button mat-raised-button color="accent" class="info-btn">{{ user?.following }} Following</button>
           </div>
-          <label for="">Username:</label><br>
+          <div class="user-info">
+          <label for="">Username:</label>
           <span>{{ user?.login }}</span><br>
           <label for="">Location:</label><br>
-          <span>{{ user?.location }}</span><br>
-          <label for="">Website:</label><br>
+          <span>{{ user?.location }}</span>
+          <label for="">Website:</label>
           <span>{{ user?.blog }}</span><br>
-          <label for="">Member Since:</label><br>
+          <label for="">Member Since:</label>
           <span>{{ user?.created_at | date: 'shortDate' }}</span>
+          </div>
+          
         </div>
       </div>  
     </mat-card-content>
@@ -51,7 +56,9 @@
     <span>{{ repo.forks }} Forks</span>
 </section>
 </div>
-</section>
+<!-- </section> -->
+
+
 
 
 

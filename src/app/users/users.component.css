@@ -14,6 +14,7 @@
   width: 30rem;
   height: 15rem;
   margin-top: 40px;
+  background: black;
 }
 .image{
   height: 100px;
@@ -28,10 +29,21 @@
 .span-disp{
   display: flex;
   flex-direction: row;
+  justify-content: right;
+  align-items:center;
 }
 .info-span{
-  background: black;
-  border-radius: 5px;
+  /* background: black; */
+  /* border-radius: 5px; */
+  
+}
+.info-btn{
+  size: 5rem;
+  font-size: 10px;
+  text-align: center;
   margin-left: 5px;
-  padding: 5px;
+}
+.user-info {
+  margin-top: 20px;
+  margin-left: 20px;
 }

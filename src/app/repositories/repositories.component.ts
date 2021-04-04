@@ -9,8 +9,18 @@ import { GithubService } from '../service/github.service'
 })
 export class RepositoriesComponent implements OnInit {
 username;
-
+repoName:string 
+repoItems:any[];
+repo:string;
   constructor(private githubService: GithubService) { 
+
+  }
+  findRepo() {
+    this.githubService.updateRepo(this.repoName);
+    this.githubService.searchRepos().subscribe(repo => {
+      this.repoItems = repo["items"];
+      console.log(this.repoItems)
+    })
 
   }
   // getRepos(){
@@ -21,6 +31,7 @@ username;
   //   }
   // }
   ngOnInit(): void {
+    this.findRepo();
   }
 
 }
