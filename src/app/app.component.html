@@ -1,4 +1,6 @@
-<mat-toolbar class="navbar" color="secondary">
+
+<main>
+  <mat-toolbar class="navbar" color="secondary">
   <mat-toolbar-row>
     <h1>GithubSearch</h1>
     <span class="menu-spacer"></span>
@@ -11,9 +13,11 @@
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+</main>
+<router-outlet></router-outlet>
 <!-- <div >
   <button mat-flat-button color="accent" style="margin-right: 5px;" routerLink='./users'>Search Users</button>
   <button mat-flat-button color="accent" style="margin-left: 5px;" routerLink='./repositories'>Search Repsitories</button>
 </div> -->
 
-<router-outlet></router-outlet>
+

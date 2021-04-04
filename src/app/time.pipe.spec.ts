@@ -1,8 +1,8 @@
-import { TimePipe } from './time-ago.pipe';
+import { TimeAgoPipe } from './time-ago.pipe';
 
-describe('TimePipe', () => {
+describe('TimeAgoPipe', () => {
   it('create an instance', () => {
-    const pipe = new TimePipe();
+    const pipe = new TimeAgoPipe();
     expect(pipe).toBeTruthy();
   });
 });

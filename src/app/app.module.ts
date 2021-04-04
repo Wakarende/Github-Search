@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card'
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,14 +23,16 @@ import { HttpClientModule } from '@angular/common/http'
 import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { GithubService } from './service/github.service';
-import { TimeAgoPipe } from './time-ago.pipe'
+import { TimeAgoPipe } from './time-ago.pipe';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     RepositoriesComponent,
-    TimeAgoPipe
+    TimeAgoPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { TimeAgoPipe } from './time-ago.pipe'
     HttpClientModule,
     MatGridListModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatExpansionModule
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]

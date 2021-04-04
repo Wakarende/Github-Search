@@ -1,13 +1,3 @@
 html { 
   font-family: 'Poppins',sans-serif;
 }
-.header-btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  border-radius: 5px;
-}
-.navbar{
-  padding-bottom: 150px;
-}

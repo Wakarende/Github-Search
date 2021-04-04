@@ -37,25 +37,30 @@
           <span>{{ user?.blog }}</span><br>
           <label for="">Member Since:</label>
           <span>{{ user?.created_at | date: 'shortDate' }}</span>
-          </div>
-          
+          </div> 
         </div>
       </div>  
     </mat-card-content>
   </mat-card>
 </div>
 <!-- Repo Display  -->
-<div class="repo-disp">
-  <section *ngFor="let repo of repos">
-    <h4>Repos</h4>
-    <h5>
-      <a href="{{ repo.html_url }}" target="_blank">{{repo.name}}</a>
-    </h5>
-    <p>{{ repo.description }}</p>
-    <span>{{ repo.watchers }} Stars</span>
-    <span>{{ repo.forks }} Forks</span>
-</section>
-</div>
+
+  <h2 class="repo-title">Repos</h2>
+  <div class="repo-disp">
+    <section *ngFor="let repo of repos">
+      <mat-card class="repo-card">
+        <mat-card-title><h5>
+        <a href="{{ repo.html_url }}" target="_blank">{{repo.name}}</a>
+      </h5></mat-card-title>
+      <mat-card-content>
+        <p class="repo-text">{{ repo.description }}</p>
+        <p class="repo-text">{{ repo.watchers }} Stars</p>
+        <p class="repo-text">{{ repo.forks }} Forks</p>
+      </mat-card-content>
+      </mat-card>
+     
+    </section>
+  </div>
 <!-- </section> -->
 
 
