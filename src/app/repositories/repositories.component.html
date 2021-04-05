@@ -1,21 +1,20 @@
 <div class="form">
-  <form (ngSubmit)="findRepo()">
+  <form>
       <mat-label class="form-label">Search Repository</mat-label><br>
       <input class="form-input" matInput placeholder="Repository Name" value="" appearance="fill" [(ngModel)]='repoName' [ngModelOptions]="{standalone: true}"><br> 
-      <button class="repo-btn" mat-raised-button color="accent" style="margin-right:5px">Search</button>
+      <button class="repo-btn" mat-raised-button color="accent" style="margin-right:5px" (click)="findRepo()" type="submit">Search</button>
 </form>
 </div>
-<div class="display text-center" *ngFor='let item of repoItems' >
+<div class="display text-center" *ngFor='let repo of repos' >
   <div class="display-flex">
     <mat-card>
     <mat-card-title>
-      <a class="repo-title" href="{{item.html_url}}" target="_blank" appRepo><strong>{{item.name|titlecase}}</strong></a>
+      <a class="repo-title" href="{{repo.html_url}}" target="_blank" appRepo><strong>{{repo.name|titlecase}}</strong></a>
     </mat-card-title>
     <mat-card-content>
-      <p class="repo-disp"><strong>Created:</strong> {{item.created_at|time}}</p>
-      <p class="repo-disp"><strong>Created by:</strong> {{item.owner.login}}</p>
-      <p class="repo-disp"><strong>Language used:</strong> {{item.language}}</p>
-      <p class="repo-disp">{{item.description}}</p>
+      <p class="repo-disp"><strong>Created:</strong> {{repo.updated_at|time}}</p>
+      <p class="repo-disp"><strong>Language used:</strong> {{repo.language}}</p>
+      <p class="repo-disp"><strong>Description:</strong>{{repo.description}}</p>
     </mat-card-content>
   </mat-card>
   </div>  

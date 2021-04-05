@@ -12,7 +12,7 @@ import { RepositoriesByName } from '../Class/repositories-by-name'
 export class GithubService {
   username:string;
   repoName:string;
-  repo:string;
+  repos:string
   apiKey:string;
   clientId: string = '761a10c6250fec1cd9c3';
   clientSecret: string = '57a0b5167d57892cfe5d6ab3a60bd0287cffeb61';
