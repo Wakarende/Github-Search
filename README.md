@@ -21,7 +21,7 @@ Run npm start for a dev server. Navigate to http://localhost:4200/. The app will
 
 - A user can search for a github user by inputting a username in a form and submitting the form. Upon submittion the users information and repositories will be displayed on the page.
 
--A user can also search for repositories by clicking the repositories button in the navbar which will direct them to the repositories page. They will then be required to fill a form which upon submition will display results of repositories related to inputed name.
+- A user can also search for repositories by clicking the repositories button in the navbar which will direct them to the repositories page. They will then be required to fill a form which upon submition will display results of repositories related to inputed name.
 
 ## Technologies Used
 
