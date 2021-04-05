@@ -9,9 +9,9 @@ export class GithubService {
   username:string;
   repoName:string;
   repo:string;
-  // apiUrl = 'https://api.github.com/users?per_page=10';
   apiKey:string = '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';
-  urlRepo = 'https://api.github.com/search/repositories?q=';
+ 
+
   constructor(private http:HttpClient) { }
 
   getUser() {
@@ -34,8 +34,4 @@ export class GithubService {
   }
   
 
-  // Repositories alone 
-  // getRepository(repo){
-  //   return this.http.get(`${this.urlRepo}${repo}&sort=stars?access_token=${this.apiKey}`)
-  // }
 

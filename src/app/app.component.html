@@ -2,6 +2,7 @@
 <main>
   <mat-toolbar class="navbar" color="secondary">
   <mat-toolbar-row>
+    <img class="logo" src="../assets/images/github-logo-white.png" alt="github-logo-white">
     <h1>GithubSearch</h1>
     <span class="menu-spacer"></span>
     <div class="header-btn">
@@ -9,16 +10,12 @@
         <a class="nav-a" mat-button routerLink='./users'  style="margin-left: 5px;"> Search Users</a>
         <a class="nav-a" mat-button routerLink='./repositories' style="margin-left: 5px;"> Search Repositories </a>
       </div>
-       <!-- <a mat-button routerLink='./home' color = "accent"> Home</a> -->
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
-</main>
 <router-outlet></router-outlet>
-<app-home></app-home>
-<!-- <div >
-  <button mat-flat-button color="accent" style="margin-right: 5px;" routerLink='./users'>Search Users</button>
-  <button mat-flat-button color="accent" style="margin-left: 5px;" routerLink='./repositories'>Search Repsitories</button>
-</div> -->
+</main>
+
+
 
 

@@ -3,14 +3,14 @@
   <div class="parent">
   <form (ngSubmit)="search()" class="form">
   <mat-label>Input Username:</mat-label><br>
-  <input matInput placeholder="Username" value="" appearance="fill" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" ><br>
+  <input matInput placeholder="Username" value="" appearance="fill" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" (keyup)="search()"><br>
   <button class="form-btn" mat-raised-button color="accent" style="margin-right:5px">Search</button>
   <button class="form-btn" mat-raised-button color="warn" (click)="reset()" style="margin-left:5px">Reset</button>
   </form>
   </div>
 </section>
 <!-- User Display  -->
-<!-- <section *ngIf="user"> -->
+<section *ngIf="user">
   <div class="display">
   <mat-card class="user-display">
     <mat-card-title>
@@ -61,7 +61,7 @@
      
     </section>
   </div>
-<!-- </section> -->
+</section>
 
 
 

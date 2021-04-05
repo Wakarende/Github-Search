@@ -24,7 +24,6 @@ import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { GithubService } from './service/github.service';
 import { TimeAgoPipe } from './time-ago.pipe';
-import { HomeComponent } from './home/home.component';
 import { RepoDirective } from './Directives/repo.directive'
 
 @NgModule({
@@ -33,7 +32,6 @@ import { RepoDirective } from './Directives/repo.directive'
     UsersComponent,
     RepositoriesComponent,
     TimeAgoPipe,
-    HomeComponent,
     RepoDirective
   ],
   imports: [

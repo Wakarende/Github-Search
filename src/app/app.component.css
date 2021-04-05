@@ -4,3 +4,10 @@ html {
 .nav-a{
   color: #008080;
 }
+.navbar{
+  background: black;
+}
+.logo{
+  width: 60px;
+  height: 50px;
+}
