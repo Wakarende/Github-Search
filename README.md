@@ -1,6 +1,7 @@
 # Git-Search
 
 An angular app that allows users to search for git repositories
+
 By Joy Kirii.
 
 ## Installation
