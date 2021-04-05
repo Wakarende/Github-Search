@@ -24,7 +24,8 @@ import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { GithubService } from './service/github.service';
 import { TimeAgoPipe } from './time-ago.pipe';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { RepoDirective } from './Directives/repo.directive'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomeComponent } from './home/home.component'
     UsersComponent,
     RepositoriesComponent,
     TimeAgoPipe,
-    HomeComponent
+    HomeComponent,
+    RepoDirective
   ],
   imports: [
     BrowserModule,

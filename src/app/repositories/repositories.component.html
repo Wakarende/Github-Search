@@ -8,7 +8,7 @@
   <div class="display-flex">
     <mat-card>
     <mat-card-title>
-      <a class="repo-title" href="{{item.html_url}}" target="_blank"><strong>{{item.name}}</strong></a>
+      <a class="repo-title" href="{{item.html_url}}" target="_blank" appRepo><strong>{{item.name|titlecase}}</strong></a>
     </mat-card-title>
     <mat-card-content>
       <p class="repo-disp"><strong>Created:</strong> {{item.created_at|time}}</p>
