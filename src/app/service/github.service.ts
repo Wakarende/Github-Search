@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class GithubService {
   username:string;
   repoName:string;
   repo:string;
-  apiKey:string ='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';
+  apiKey:string;
   clientId: string = '761a10c6250fec1cd9c3';
   clientSecret: string = '57a0b5167d57892cfe5d6ab3a60bd0287cffeb61';
 
@@ -26,7 +28,7 @@ export class GithubService {
   }
   searchRepos(){
     return this.http.get('https://api.github.com/search/repositories?q=' + this.repoName, ({
-      headers: new HttpHeaders({Authorization: `token ${this.apiKey}`})
+      headers: new HttpHeaders({Authorization: `token ${environment.apiKey}`})
     }))
     }
     updateRepo(repo:string) {
