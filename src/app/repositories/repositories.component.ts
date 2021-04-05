@@ -16,26 +16,13 @@ repos: Repos[];
   constructor(private githubService: GithubService) { 
 
   }
-  // findRepo() {
-  //   this.githubService.updateRepo(this.repoName);
-  //   this.githubService.searchRepos().subscribe(repo => {
-  //     this.repoItems = repo["items"];
-  //     console.log(this.repoItems)
-  //   })
-
-  // }
+  
   findRepo(){
     this.githubService.searchRepos(this.repoName)
     this.repos = this.githubService.reposByName
     this.repoName = ''
   }
-  // getRepos(){
-  //   this.state.$subject
-  //   .subscribe((username:string)) => {
-  //     this.username = username
-  //     this.getRepos()
-  //   }
-  // }
+  
   ngOnInit(){
     this.findRepo();
   }

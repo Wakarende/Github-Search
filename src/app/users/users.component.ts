@@ -31,8 +31,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.githubService.getUser("Wakarende")
-    // this.user = this.githubService.username
+
   }
 
 }
