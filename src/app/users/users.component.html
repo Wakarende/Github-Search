@@ -34,7 +34,7 @@
           <label class="description" for="">Location:</label>
           <span class="description-text">{{ user?.location }}</span><br>
           <label class="description" for="">Website:</label>
-          <span class="description-text">{{ user?.blog }}</span><br>
+          <span class="description-text"><a href="">{{ user?.blog }}</a></span><br>
           <label class="description" for="">Member Since:</label>
           <span class="description-text">{{ user?.created_at | date: 'shortDate' }}</span>
           </div> 
