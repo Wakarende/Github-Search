@@ -9,7 +9,7 @@ import { GithubService } from '../service/github.service'
 })
 export class RepositoriesComponent implements OnInit {
 username;
-repoName:string = "Akan"
+repoName:string
 repoItems:any[];
 repo:string;
   constructor(private githubService: GithubService) { 
@@ -30,7 +30,7 @@ repo:string;
   //     this.getRepos()
   //   }
   // }
-  ngOnInit(): void {
+  ngOnInit(){
     this.findRepo();
   }
 

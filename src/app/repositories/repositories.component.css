@@ -35,3 +35,9 @@ mat-card{
   color: #008080;
   text-decoration: none;
 }
+.repo-btn{
+  background: #008080;
+  margin-top: 5px;
+  border-radius: 10px;
+  color: white;
+}

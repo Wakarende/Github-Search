@@ -1,7 +1,8 @@
 <div class="form">
-  <form>
+  <form (ngSubmit)="findRepo()">
       <mat-label class="form-label">Search Repository</mat-label><br>
-      <input class="form-input" matInput placeholder="Repository Name" value="" appearance="fill" [(ngModel)]='repoName' (keyup)="findRepo()" [ngModelOptions]="{standalone: true}"><br> 
+      <input class="form-input" matInput placeholder="Repository Name" value="" appearance="fill" [(ngModel)]='repoName' [ngModelOptions]="{standalone: true}"><br> 
+      <button class="repo-btn" mat-raised-button color="accent" style="margin-right:5px">Search</button>
 </form>
 </div>
 <div class="display text-center" *ngFor='let item of repoItems' >
