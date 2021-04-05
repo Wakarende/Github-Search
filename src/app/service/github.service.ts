@@ -29,14 +29,7 @@ export class GithubService {
   updateUsername(username:string){
     this.username = username;
   }
-  // searchRepos(){
-  //   return this.http.get('https://api.github.com/search/repositories?q=' + this.repoName, ({
-  //     headers: new HttpHeaders({Authorization: `token ${environment.apiKey}`})
-  //   }))
-  //   }
-  //   updateRepo(repo:string) {
-  //   this.repoName = repo;
-  // }
+  
   searchRepos(repoName){
     interface repobyNameApiResponse{
       items:[];
