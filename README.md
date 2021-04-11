@@ -40,7 +40,7 @@ No known Bugs at the moment
 For any further questions, contributions or feedback, get in touch with me through the following contacts;
 
 - Email: joykirii@gmail.com
-- Phone: +254723212289
+
 
 ## License
 
